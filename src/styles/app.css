@@ -2485,3 +2485,37 @@ button.user-block[aria-expanded='true'] {
 .nav a .count {
   flex: 0 0 auto;
 }
+
+@media (max-width: 1400px) {
+  .topbar-search {
+    width: 200px;
+    flex-basis: 200px;
+  }
+}
+
+/* The title block takes the leftover width but never less than the heading needs; the controls are one
+   group that drops to a second line together when the row is too narrow. */
+.topbar .title {
+  flex: 1 1 0;
+  min-width: min(300px, 100%);
+}
+
+.topbar-tools {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  .topbar-tools {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.topbar h1 {
+  white-space: nowrap;
+}
