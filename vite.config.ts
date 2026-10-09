@@ -1,0 +1,12 @@
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+  plugins: [react()],
+  server: { port: 5180 },
+  build: { chunkSizeWarningLimit: 1600 },
+  test: {
+    environment: 'node',
+    include: ['tests/**/*.test.{ts,tsx}'],
+  },
+});

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>School Fee Intelligence — See every fee at a glance</title>
+    <meta name="description" content="School Fee Management & Intelligence Dashboard: upload existing fee records, see the fee position instantly, know which students need attention, and act." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      // Entrance boot: hide the landing mosaic until the entrance choreography is ready.
+      (function () {
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var onLanding = location.pathname === '/' || location.pathname === '';
+        if (!reduce && onLanding) {
+          document.documentElement.classList.add('motion-pending');
+          window.__entranceFailsafe = setTimeout(function () {
+            document.documentElement.classList.remove('motion-pending');
+          }, 2400);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
